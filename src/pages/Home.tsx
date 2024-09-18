@@ -7,6 +7,8 @@ import { VerificationSteps } from "../utils/config";
 import { AlertInfo } from "../types/data-types";
 import AlertMessage from "../components/commons/AlertMessage";
 import { SetAlertInfoFunction } from "../types/function-types";
+import Navbar from "../components/Home/VerificationProgressTracker/Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 let activeStep: number = 0;
 const setActiveStep = (newValue: number) => {
@@ -38,6 +40,7 @@ function Home(props: any) {
   return (
     <AlertsContext.Provider value={{ alertInfo, setAlertInfo }}>
       <ActiveStepContext.Provider value={{ getActiveStep, setActiveStep }}>
+        <Navbar />
         <Grid container>
           {/* <Grid
             item

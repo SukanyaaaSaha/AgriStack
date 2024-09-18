@@ -10,14 +10,14 @@ const getPositioning = (
   resultSectionRef: React.RefObject<HTMLDivElement>
 ): CardPositioning => {
   // top = 340 - it is precalculated based in the xd design
-  const positioning = { top: 212, right: 0 };
+  const positioning = { top: 360, right: 0 };
   if (!!resultSectionRef?.current) {
     let resultSectionWidth =
       resultSectionRef.current.getBoundingClientRect().width;
     if (window.innerWidth === resultSectionWidth) {
       return positioning;
     }
-    return { ...positioning, right: (resultSectionWidth - 800) / 2 };
+    return { ...positioning, right: (resultSectionWidth - 1000) / 2 };
   }
   return positioning;
 };
@@ -52,7 +52,7 @@ const Result = ({
       </ResultsSummaryContainer>
       <VcDisplayCardContainer
         style={{ position: "absolute" }}
-        cardPositioning={{
+        cardpositioning={{
           top: vcDisplayCardPositioning.top,
           right: vcDisplayCardPositioning.right,
         }}

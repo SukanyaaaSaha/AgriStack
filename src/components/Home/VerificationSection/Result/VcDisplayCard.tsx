@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import { CodeBlock } from "react-code-blocks";
 import { convertToTitleCase, getDisplayValue } from "../../../../utils/misc";
@@ -8,17 +8,24 @@ import { SetActiveStepFunction } from "../../../../types/function-types";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import { VerificationSteps } from "../../../../utils/config";
 import {
+  CodeBox,
   VcDisplay,
   VcProperty,
   VcPropertyKey,
   VcPropertyValue,
   VcVerificationFailedContainer,
+  DVC,
 } from "./styles";
 import DemographicDetailsTemplate from "./Templates/DemographicDetailsTemplate";
 import LandDetailsTemplate from "./Templates/LandDetailsTemplate";
 import CropDetailsTemplate from "./Templates/CropDetailsTemplate";
+import AssetCredentialsTemplate from "./Templates/AssetCredentialsTemplate";
 const propertyOrder = [
   "farmerId",
+  "farmerName",
+  "identifierName",
+  "address",
+  "assetCredentials",
   "farmerDemoGraphicDetails",
   "farmerLandDetails",
   "farmerCropDetails",
@@ -45,15 +52,21 @@ function VcDisplayCard({
                     <VcPropertyValue>
                       {getDisplayValue(vc.credentialSubject[key])}
                     </VcPropertyValue>
+                  ) : key === "assetCredentials" ? (
+                    <AssetCredentialsTemplate
+                      value={vc.credentialSubject[key]}
+                      assetHash={vc.credentialSubject.assetHash}
+                    />
                   ) : key === "farmerDemoGraphicDetails" ? (
                     <DemographicDetailsTemplate
                       value={vc.credentialSubject[key]}
                     />
-                  ) : key === "farmerLandDetails" ? (
-                    <LandDetailsTemplate value={vc.credentialSubject[key]} />
-                  ) : key === "farmerCropDetails" ? (
-                    <CropDetailsTemplate value={vc.credentialSubject[key]} />
                   ) : (
+                    // : key === "farmerLandDetails" ? (
+                    //   <LandDetailsTemplate value={vc.credentialSubject[key]} />
+                    // ) : key === "farmerCropDetails" ? (
+                    //   <CropDetailsTemplate value={vc.credentialSubject[key]} />
+                    // )
                     <VcPropertyValue>
                       {JSON.stringify(vc.credentialSubject[key], null, 2)}
                     </VcPropertyValue>
@@ -92,6 +105,7 @@ function VcDisplayCard({
             showLineNumbers={true}
             wrapLongLines={true}
           ></CodeBlock>
+          <img src={vc.credentialSubject.assetCredentials[1].qrUrl}></img>
         </CodeBox> */}
       </VcDisplay>
       <Box

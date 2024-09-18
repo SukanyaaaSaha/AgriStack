@@ -1,0 +1,42 @@
+/* .navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+} */
+
+.emblem {
+  width: 55px; /* Adjust based on your emblem size */
+  height: 100px; /* Maintain aspect ratio */
+  margin-right: 10px;
+  float: inline-start;
+  vertical-align: bottom; /* Space between the emblem and the department name */
+}
+p {
+  margin-bottom: 0;
+}
+
+.logo-text {
+  margin-right: 20px;
+  font-size: 12px;
+  text-wrap: nowrap;
+  /* vertical-align: middle; */
+  text-align: left;
+  font-weight: 600;
+  line-height: 1.5; /* Adjust based on your preference */
+}
+.agristack-logo {
+  width: 200px; /* Adjust based on your emblem size */
+}
+
+.logo {
+  align-items: center;
+  display: flex !important;
+  box-sizing: border-box;
+  margin: 0;
+}
+.header__logo {
+  max-height: 70px;
+  align-items: center;
+  color: #0c0b0b;
+}

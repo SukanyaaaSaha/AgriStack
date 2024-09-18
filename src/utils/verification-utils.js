@@ -45,7 +45,7 @@ let revocationList = [];
 // ];
 
 const verify = async (credential) => {
-  console.log("verify trace log1", credential);
+  // console.log("verify trace log1", credential);
   let resolutionResult = await resolveDid(
     credential?.proof?.verificationMethod
   );
@@ -53,12 +53,12 @@ const verify = async (credential) => {
     throw new Error(resolutionResult.didResolutionMetadata.error);
   }
   let issuerDID = resolutionResult.didDocument;
-  console.log("verify trace log2", issuerDID.id);
+  // console.log("verify trace log2", issuerDID.id);
 
   let revocationUrl =
     "http://10.128.3.15:80/credential/credentials/revocation-list";
   // revocationList = await downloadRevocationList(issuerDID.id, revocationUrl);
-  console.log("Revocation List : ", revocationList);
+  // console.log("Revocation List : ", revocationList);
   return await verifyCredential(issuerDID, credential, revocationList);
 };
 

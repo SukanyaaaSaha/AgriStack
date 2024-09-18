@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './assets/logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./assets/logo.svg";
+import "./App.css";
 import Home from "./pages/Home";
 import Offline from "./pages/Offline";
-import {RouterProvider, createBrowserRouter} from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Home/>
-    },
-    {
-        path: '/offline',
-        element: <Offline/>
-    }
-])
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/offline",
+    element: <Offline />,
+  },
+]);
 
 function App() {
-    return (
-        <RouterProvider router={router}/>
-    );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

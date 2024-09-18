@@ -1,23 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {GlobalStyles, ThemeProvider} from "@mui/material";
-import {InjiTheme} from "./utils/inji-theme";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { GlobalStyles, ThemeProvider } from "@mui/material";
+import { InjiTheme } from "./utils/inji-theme";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 
 // Store in a constant to avoid re-rendering and recalculating the style
-const inputGlobalStyles = <GlobalStyles styles={{ fontFamily: 'Inter'}} />;
+const inputGlobalStyles = <GlobalStyles styles={{ fontFamily: "Inter" }} />;
 
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={InjiTheme}>
-        {inputGlobalStyles}
-        <App />
+      {inputGlobalStyles}
+      <App />
     </ThemeProvider>
   </React.StrictMode>
 );

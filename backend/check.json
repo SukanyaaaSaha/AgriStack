@@ -1,0 +1,64 @@
+{
+    "id": "did:rcw:a36a7d12-6163-4324-90b0-1a7343eb368e",
+    "credentialSubject": {
+        "id": "did:1234",
+        "address": "Ward No 16, Kaimganj, FARRUKHABAD",
+        "farmerId": "78267102219",
+        "assetHash": "Wkdsa09uSmpkenBtTWpCaE1XRmhOUzFtTVRkakxUUmlOR1F0WVRRek5pMHpZekJrTlRreE9UVTNNalE9fApaR2xrT25KamR6cGhabVkwTm1JeFpTMWhOVFl6TFRRNVpEWXRZakZsWmkwM05ERTVPRFJtTTJRMU9UST18ClpHbGtPbkpqZHpveVpUSXlNVGt4T0MxaVpXWmlMVFEyTURRdFltUm1NQzB5TURjeE1XUTFZbUl3WmpZPXwKWkdsa09uSmpkenBrWXpjNVlXRXpaQzB5TVdNd0xUUmxaVEV0T0dZeE1TMDRPR1kyTTJaaFlqVXhNRGs9fApaR2xrT25KamR6cGhNVFUzWVdaallTMDJOekUyTFRSbFlqVXRZV0ppWkMxaE56ZGxNalZqTTJFMlpqYz0=",
+        "wrapperId": "wrprId:12324",
+        "farmerName": "Abhishek Ranjan",
+        "identifierName": "C/o Sunil Kumar Ranjan",
+        "assetCredentials": [
+            {
+                "qrUrl": "https://ridhima-25.github.io/test_project/dvc/cred1.png",
+                "assetType": "LAND",
+                "assetData1": "UP5991117090",
+                "assetData2": "261/1455800261000012",
+                "assetData3": "Raukri (145580)",
+                "assetData4": "Kaimganj",
+                "assetData5": "FARRUKHABAD",
+                "credentialId": "did:rcw:f20a1aa5-f17c-4b4d-a436-3c0d59195724"
+            },
+            {
+                "qrUrl": "https://ridhima-25.github.io/test_project/dvc/cred2.png",
+                "assetType": "LAND",
+                "assetData1": "UP1134226693",
+                "assetData2": "90/1455800090000012",
+                "assetData3": "Raukri (145580)",
+                "assetData4": "Kaimganj",
+                "assetData5": "FARRUKHABAD",
+                "credentialId": "did:rcw:aff46b1e-a563-49d6-b1ef-741984f3d592"
+            },
+            {
+                "qrUrl": "https://ridhima-25.github.io/test_project/dvc/cred3.png",
+                "assetType": "CROP",
+                "assetData1": "UP1134226693",
+                "assetData2": "2023-2024",
+                "assetData3": "Rabi",
+                "assetData4": "Tobacco",
+                "assetData5": "0.0570 Hectares",
+                "credentialId": "did:rcw:2e221918-befb-4604-bdf0-20711d5bb0f6"
+            },
+            {
+                "qrUrl": "https://ridhima-25.github.io/test_project/dvc/cred5.png",
+                "assetType": "CROP",
+                "assetData1": "UP1134226693",
+                "assetData2": "2023-2024",
+                "assetData3": "Rabi",
+                "assetData4": "Maize",
+                "assetData5": "0.0070 Hectares",
+                "credentialId": "did:rcw:dc79aa3d-21c0-4ee1-8f11-88f63fab5109"
+            },
+            {
+                "qrUrl": "https://ridhima-25.github.io/test_project/dvc/cred4.png",
+                "assetType": "CROP",
+                "assetData1": "UP5991117090",
+                "assetData2": "2023-2024",
+                "assetData3": "Rabi",
+                "assetData4": "sarson",
+                "assetData5": "0.0890 Hectares",
+                "credentialId": "did:rcw:a157afca-6716-4eb5-abbd-a77e25c3a6f7"
+            }
+        ]
+    }
+}
